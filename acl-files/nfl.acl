@@ -1,0 +1,28 @@
+# file: <rootdir>/nfl
+# owner: nixadmin
+# group: bigdata_nfl
+# flags: -s-
+user::rwx
+group::---
+group:bigdata_nfl:r-x
+mask::rwx
+other::---
+default:user::rwx
+default:group::---
+default:mask::rwx
+default:other::---
+
+# file: <rootdir>/nfl/shared
+# owner: nixadmin
+# group: bigdata_nfl
+# flags: -s-
+user::rwx
+group::---
+group:bigdata_nfl:rwx
+mask::rwx
+other::---
+default:user::rwx
+default:group::---
+default:group:bigdata_nfl:rwx
+default:mask::rwx
+default:other::---

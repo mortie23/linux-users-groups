@@ -1,0 +1,14 @@
+# file: <rootdir>/nba/bulls
+# owner: nixadmin
+# group: bigdata_nba_bulls
+# flags: -s-
+user::rwx
+group::---
+group:bigdata_nba_bulls:rwx
+mask::rwx
+other::---
+default:user::rwx
+default:group::---
+default:group:bigdata_nba_bulls:rwx
+default:mask::rwx
+default:other::---

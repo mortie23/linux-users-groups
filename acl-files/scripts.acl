@@ -1,0 +1,64 @@
+# file: /opt/scripts/
+# owner: nixadmin
+# group: sysadmin
+# flags: -s-
+user::rwx
+group::rwx
+group:sysadmin:rwx
+mask::rwx
+other::r-x
+default:group:sysadmin:rwx
+default:mask::rwx
+default:other::---
+
+# file: /opt/scripts/security/
+# owner: nixadmin
+# group: sysadmin
+# flags: -s-
+user::rwx
+group::rwx
+group:sysadmin:rwx
+mask::rwx
+other::r-x
+default:group:sysadmin:rwx
+default:mask::rwx
+default:other::---
+
+# file: /opt/scripts/security/logs
+# owner: nixadmin
+# group: sysadmin
+# flags: -s-
+user::rwx
+group::rwx
+group:sysadmin:rwx
+mask::rwx
+other::r-x
+default:group:sysadmin:rwx
+default:mask::rwx
+default:other::---
+
+# file: /opt/scripts/security/acl-files
+# owner: nixadmin
+# group: sysadmin
+# flags: -s-
+user::rwx
+group::rwx
+group:sysadmin:rwx
+mask::rwx
+other::r-x
+default:group:sysadmin:rwx
+default:mask::rwx
+default:other::---
+
+# file: /opt/scripts/security/param-files
+# owner: nixadmin
+# group: sysadmin
+# flags: -s-
+user::rwx
+group::rwx
+group:sysadmin:rwx
+mask::rwx
+other::r-x
+default:group:sysadmin:rwx
+default:mask::rwx
+default:other::---

@@ -1,0 +1,14 @@
+# file: <rootdir>/nfl/patriots
+# owner: nixadmin
+# group: bigdata_nfl_patriots
+# flags: -s-
+user::rwx
+group::---
+group:bigdata_nfl_patriots:rwx
+mask::rwx
+other::---
+default:user::rwx
+default:group::---
+default:group:bigdata_nfl_patriots:rwx
+default:mask::rwx
+default:other::---

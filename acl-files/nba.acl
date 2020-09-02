@@ -1,0 +1,28 @@
+# file: <rootdir>/nba
+# owner: nixadmin
+# group: bigdata_nba
+# flags: -s-
+user::rwx
+group::---
+group:bigdata_nba:r-x
+mask::rwx
+other::---
+default:user::rwx
+default:group::---
+default:mask::rwx
+default:other::---
+
+# file: <rootdir>/nba/shared
+# owner: nixadmin
+# group: bigdata_nba
+# flags: -s-
+user::rwx
+group::---
+group:bigdata_nba:rwx
+mask::rwx
+other::---
+default:user::rwx
+default:group::---
+default:group:bigdata_nba:rwx
+default:mask::rwx
+default:other::---

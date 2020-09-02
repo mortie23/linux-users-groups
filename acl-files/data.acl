@@ -1,0 +1,8 @@
+# file: /u01/data
+# owner: nixadmin
+# group: nixadmin
+# flags: -s-
+user::rwx
+group::rwx
+group:sysadmin:rwx
+other::r-x
