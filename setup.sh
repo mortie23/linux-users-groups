@@ -15,17 +15,13 @@ useradd -m nixadmin -p nixadmin
 usermod -aG sudo nixadmin
 # Create data root
 mkdir /u01/data
-# Create scripts root
-mkdir /opt/scripts
-# Change owner and group
-chgrp sysadmin scripts/
-chown nixadmin scripts/
+
+# Install dependancy
+sudo apt install jq
+sudo apt install acl
 
 # Login as nixadmin
 su nixadmin
-# Change shell to bash
-chsh -s /bin/bash
-# SCP the files to linux machine
 
-setfacl --restore=./acl-files/data.acl
-setfacl --restore=./acl-files/scripts.acl
+# Set the permissions on the data directory
+sudo setfacl --restore=./acl-files/data.acl
