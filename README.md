@@ -5,12 +5,25 @@ This package has some dependencies including ACLs and JQ which will be outlined 
 
 ## Description
 
-This code repository will create everything required to impliment the security model from start to finsh. 
+This code repository will create everything required to implement the security model from start to finish.
+
+The structure of the security model is based on a two level organisation structure. The organisation has agencies which comprise of business units. This is represented by:
+
+- Agency NFL
+  - Business unit 49ers
+  - Business unit patriots
+- Agency NBA
+  - Business unit Bulls
+  - Business unit Warriors
+
+![](./img/organisation-structure.png)
+
+Each agency has a shared directory that each business unit can read and write to for files that are shared between business units. Then each business unit has a directory that only they can read and write from.
 
 ## Getting Setup
 
 Follow the manual steps in `setup.sh`.
-The administrator account and group is `nixadmin`. If you choose to change this you will need to update the ACL files that use this user and group as well.  
+The administrator account and group is `nixadmin`. If you choose to change this you will need to update the ACL files that use this user and group as well.
 
 Once you have run the manual steps in `setup.sh` you need to make the following scrips executable.
 
@@ -41,7 +54,7 @@ sudo ./dir-businessunit.sh -p ./param-files/global.json -l b -a nfl -b patriots
 ## Success
 
 The directories have been deployed as per the security model:  
-![](img/ubuntu-deployed.png)  
+![](img/ubuntu-deployed.png)
 
 The example user MichaelJordan in `{agency: nba, businessunit: bulls}` can change into directories allowed and write files where allowed.  
 ![](img/ubuntu-tests.png)
