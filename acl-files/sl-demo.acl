@@ -1,0 +1,14 @@
+# file: <rootdir>/sl/demo
+# owner: nixadmin
+# group: bigdata_sl_demo
+# flags: -s-
+user::rwx
+group::---
+group:bigdata_sl_demo:rwx
+mask::rwx
+other::---
+default:user::rwx
+default:group::---
+default:group:bigdata_sl_demo:rwx
+default:mask::rwx
+default:other::---

@@ -22,7 +22,35 @@ Each agency has a shared directory that each business unit can read and write to
 
 ## Getting Setup
 
-Follow the manual steps in `setup.sh`.
+Follow the manual steps in 
+
+```sh
+cat setup.sh
+```
+
+```sh
+## Create user for sysadmin
+useradd -m nixadmin -p nixadmin
+# Create group for admin
+groupadd sysadmin
+# Add user to group
+useradd -m nixadmin -p nixadmin
+# Add user to sudo group
+usermod -aG sudo nixadmin
+# Create data root
+mkdir /u01/data
+
+# Install dependancy
+sudo apt install jq
+sudo apt install acl
+
+# Login as nixadmin
+su nixadmin
+
+# Set the permissions on the data directory
+sudo setfacl --restore=./acl-files/data.acl
+```
+
 The administrator account and group is `nixadmin`. If you choose to change this you will need to update the ACL files that use this user and group as well.
 
 Once you have run the manual steps in `setup.sh` you need to make the following scrips executable.
